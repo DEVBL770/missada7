@@ -4,9 +4,9 @@
       <img
         src="https://static3.depositphotos.com/1000747/223/v/450/depositphotos_2231828-stock-illustration-pizza-chef.jpg"
         alt="Logo Bella Napoli"
-        class="w-16 h-16 rounded-full shadow-lg border-4 border-white object-cover"
+        class="w-30 h-30 rounded-full shadow-lg border-4 border-white object-cover"
       />
-      <h1 class="text-2xl font-serif tracking-wide text-center">Pizzeria Bella Napoli</h1>
+      <h1 class="text-3xl font-serif tracking-wide text-center">Pizzeria Bella Napoli</h1>
     </div>
   </header>
 </template>
