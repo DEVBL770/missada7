@@ -1,8 +1,12 @@
 <template>
-    <header class="text-center py-12 bg-ivory">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/023/654/784/small_2x/golden-logo-template-free-png.png" alt="Logo" class="mx-auto w-28 h-28 mb-6" />
-      <h1 class="text-4xl font-serif text-softblack">Mon Resto</h1>
-      <p class="text-lg font-light text-gray-600 mt-2">Carte raffinée — Cuisine française de saison</p>
-    </header>
-  </template>
-  
+  <header class="bg-red-800 text-white py-1 shadow-md">
+    <div class="flex flex-col items-center justify-center space-y-1">
+      <img
+        src="https://static3.depositphotos.com/1000747/223/v/450/depositphotos_2231828-stock-illustration-pizza-chef.jpg"
+        alt="Logo Bella Napoli"
+        class="w-16 h-16 rounded-full shadow-lg border-4 border-white object-cover"
+      />
+      <h1 class="text-2xl font-serif tracking-wide text-center">Pizzeria Bella Napoli</h1>
+    </div>
+  </header>
+</template>

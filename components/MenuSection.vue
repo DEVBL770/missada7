@@ -1,16 +1,14 @@
 <template>
-  <section class="mb-10">
-    <h2 class="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">{{ title }}</h2>
-    <ul class="space-y-4">
-      <MenuItem v-for="(item, index) in items" :key="index" :item="item" />
-    </ul>
+  <section>
+    <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center md:text-left text-grey">
+      {{ title }}
+    </h2>
+    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+      <MenuItem v-for="item in items" :key="item.name" :item="item" />
+    </div>
   </section>
 </template>
 
 <script setup>
-defineProps({
-  title: String,
-  items: Array
-})
-import MenuItem from './MenuItem.vue'
+const props = defineProps(['title', 'items'])
 </script>
