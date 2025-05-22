@@ -1,18 +1,18 @@
 <template>
-  <footer class="w-full bg-green-800 text-white text-center py-6 mt-auto shadow-inner">
+  <footer class="w-full bg-yellow-900 text-white text-center py-6 mt-auto shadow-inner">
     <div class="max-w-4xl mx-auto space-y-2">
-      <div class="flex justify-center gap-6">
-        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new--v1.png" alt="Instagram" class="w-6 h-6 invert" />
+      <div class="flex justify-center gap-4">
+        <a href="#" class="hover:text-yellow-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" class="w-5 h-5" />
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="https://img.icons8.com/ios/50/FFFFFF/facebook-new.png" alt="Facebook" class="w-6 h-6 invert" />
+        <a href="#" class="hover:text-yellow-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384021.png" alt="Facebook" class="w-5 h-5" />
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="TripAdvisor">
-          <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/24/FFFFFF/external-tripadvisor-the-ultimate-travel-companion-travel-planning-tool-logo-regular-tal-revivo.png" alt="TripAdvisor" class="w-6 h-6 invert" />
+        <a href="#" class="hover:text-yellow-300">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="TripAdvisor" class="w-5 h-5" />
         </a>
       </div>
-      <p class="text-sm">© 2025 Bella Napoli. Tous droits réservés.</p>
+      <p class="text-sm">© 2025 שווארמה ירושלים. כל הזכויות שמורות.</p>
     </div>
   </footer>
 </template>

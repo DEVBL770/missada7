@@ -1,15 +1,12 @@
 <template>
-  <div class="relative flex flex-col min-h-screen text-gray-800">
-    <!-- Image de fond avec filtre gris clair -->
-    <div 
-      class="absolute inset-0 bg-cover bg-center" 
-      style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092')"
-    >
-      <div class="absolute inset-0 bg-gray-100/35"></div>  <!-- overlay gris clair à 20% d'opacité -->
+  <div class="flex flex-col min-h-screen relative">
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1625943477729-d59f9d22bfb5')] bg-cover bg-center">
+        <div class="w-full h-full bg-white/30 backdrop-brightness-90"></div>
+      </div>
     </div>
 
-    <!-- Contenu au-dessus -->
-    <div class="relative flex flex-col min-h-screen">
+    <div class="relative z-10 flex flex-col min-h-screen">
       <Header />
 
       <main class="flex-grow">
@@ -32,48 +29,36 @@
   </div>
 </template>
 
-
 <script setup>
-const selected = ref('Antipasti')
+const selected = ref('Pitas')
 
 const categories = [
   {
-    name: 'Antipasti',
+    name: 'Pitas',
     items: [
-      { name: 'Bruschetta', desc: 'Pain grillé, tomates fraîches, basilic', price: '6 €', img: 'https://img.freepik.com/photos-gratuite/assiette-gros-plan-sushi_23-2148631177.jpg?auto=compress&cs=tinysrgb&w=600' },
-      { name: 'Mozzarella Sticks', desc: 'Mozzarella panée, sauce tomate maison', price: '7 €', img: 'https://st4.depositphotos.com/19157714/31390/i/450/depositphotos_313903296-stock-photo-close-view-delicious-sushi-set.jpg' },
-      { name: 'Arancini', desc: 'Boulettes de riz farcies, panées et frites', price: '7 €', img: 'https://img.freepik.com/photos-premium/arancini-italiens-traditionnels-riz-boulettes-sauce_90220-1229.jpg' },
+      { name: 'Shawarma', desc: 'Émincé de dinde grillée, salade, tahini', price: '9€', img: 'https://cdn.pixabay.com/photo/2017/01/04/13/58/shawarma-1952794_1280.jpg' },
+      { name: 'Falafel', desc: 'Boulettes de pois chiches frites, salade, tahini', price: '8€', img: 'https://cdn.pixabay.com/photo/2020/11/10/14/38/falafel-5731621_1280.jpg' },
     ],
   },
   {
-    name: 'Pizzas',
+    name: 'Assiettes',
     items: [
-      { name: 'Margherita', desc: 'Tomate, mozzarella, basilic', price: '10 €', img: 'https://miyakosushi.fr/wp-content/uploads/2024/05/MENU-SUSHI-UNE.png' },
-      { name: 'Regina', desc: 'Jambon, champignons, mozzarella', price: '12 €', img: 'https://files.gandi.ws/gandi43264/image/m11.jpg' },
-      { name: '4 Fromaggi', desc: 'Mozzarella, gorgonzola, parmesan, chèvre', price: '13 €', img: 'https://img.freepik.com/photos-gratuite/pizza-quatre-fromages-table-bois_23-2148359203.jpg' },
-    ],
-  },
-  {
-    name: 'Pâtes',
-    items: [
-      { name: 'Spaghetti Carbonara', desc: 'Crème, œuf, pancetta, parmesan', price: '11 €', img: 'https://img.freepik.com/photos-gratuite/spaghetti-carbonara-cremeux-parmesan_140725-3905.jpg' },
-      { name: 'Penne Arrabiata', desc: 'Sauce tomate épicée, ail, basilic', price: '10 €', img: 'https://img.freepik.com/photos-gratuite/penne-arrabiata-pates-epicees_140725-9187.jpg' },
+      { name: 'Assiette Shawarma', desc: 'Viande, riz, salades, pain pita', price: '12€', img: 'https://cdn.pixabay.com/photo/2017/06/27/08/56/shawarma-2442996_1280.jpg' },
+      { name: 'Assiette Falafel', desc: 'Falafels, houmous, salades, pain pita', price: '11€', img: 'https://cdn.pixabay.com/photo/2017/05/07/08/56/falafel-2290741_1280.jpg' },
     ],
   },
   {
     name: 'Desserts',
     items: [
-      { name: 'Tiramisu', desc: 'Café, mascarpone, cacao', price: '6 €', img: 'https://sushishop.com/wp-content/uploads/2024/12/SS24_UEATS_CHU_SALMON.jpg' },
-      { name: 'Panna Cotta', desc: 'Crème cuite, coulis de fruits rouges', price: '5 €', img: 'https://img.freepik.com/photos-gratuite/panna-cotta-fraises_144627-8018.jpg' },
-      { name: 'Cannoli', desc: 'Pâtisserie fourrée à la ricotta sucrée', price: '4 €', img: 'https://img.freepik.com/photos-premium/cannoli-dessert-italien-traditionnel-ricotta-chocolat_90220-1242.jpg' },
+      { name: 'Baklava', desc: 'Pâtisserie au miel et noix', price: '4€', img: 'https://cdn.pixabay.com/photo/2020/02/02/18/24/baklava-4813868_1280.jpg' },
+      { name: 'Malabi', desc: 'Crème à la rose, pistaches', price: '4€', img: 'https://cdn.pixabay.com/photo/2022/08/11/10/25/malabi-7378552_1280.jpg' },
     ],
   },
   {
     name: 'Boissons',
     items: [
-      { name: 'Eau Minérale', desc: 'Plate ou gazeuse', price: '2 €', img: 'https://img.freepik.com/photos-gratuite/verre-eau-froide-table_1150-38357.jpg' },
-      { name: 'Sodas', desc: 'Coca, Fanta, Sprite', price: '3 €', img: 'https://img.freepik.com/photos-gratuite/verre-coca-glacons_144627-16227.jpg' },
-      { name: 'Vins Italiens', desc: 'Rouge, Blanc, Rosé (verre)', price: '5 €', img: 'https://img.freepik.com/photos-gratuite/verre-vin-rouge-table_144627-24272.jpg' },
+      { name: 'Limonana', desc: 'Citronnade à la menthe fraîche', price: '3€', img: 'https://cdn.pixabay.com/photo/2015/07/02/10/18/lemonade-828974_1280.jpg' },
+      { name: 'Bière Maccabee', desc: 'Bière israélienne', price: '4€', img: 'https://cdn.pixabay.com/photo/2015/11/19/21/11/beer-1058087_1280.jpg' },
     ],
   },
 ]
