@@ -1,12 +1,13 @@
 <template>
   <section>
-    <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center md:text-left text-white drop-shadow-md">{{ title }}</h2>
-    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+    <h2 class="text-2xl font-bold mb-4">{{ title }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <MenuItem v-for="item in items" :key="item.name" :item="item" />
     </div>
   </section>
 </template>
 
 <script setup>
-const props = defineProps(['title', 'items'])
+import MenuItem from './MenuItem.vue'
+defineProps(['title', 'items'])
 </script>

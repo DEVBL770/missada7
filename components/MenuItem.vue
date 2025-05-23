@@ -1,14 +1,14 @@
 <template>
-  <div class="flex gap-4 bg-white/90 rounded-xl p-4 shadow-md items-center">
-    <img :src="item.img" alt="" class="w-16 h-16 rounded-full object-cover border" />
+  <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-4">
+    <img :src="item.img" :alt="item.name" class="w-20 h-20 object-contain" />
     <div class="flex-1">
-      <h3 class="text-base md:text-lg font-semibold">{{ item.name }}</h3>
-      <p class="text-xs md:text-sm text-gray-600">{{ item.desc }}</p>
+      <div class="font-bold">{{ item.name }}</div>
+      <div class="text-sm text-gray-600">{{ item.desc }}</div>
     </div>
-    <div class="text-red-700 font-bold text-sm md:text-base">{{ item.price }}</div>
+    <div class="text-yellow-600 font-bold">{{ item.price }}</div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['item'])
+defineProps(['item'])
 </script>

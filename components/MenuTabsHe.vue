@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-100 p-2 flex justify-center gap-2">
+  <div dir="rtl" class="bg-blue-100 p-2 flex justify-center gap-2">
     <button
       v-for="cat in categories"
       :key="cat.name"
