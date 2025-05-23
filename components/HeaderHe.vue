@@ -1,5 +1,5 @@
 <template>
-  <header dir="rtl" class="bg-blue-600 text-white p-4 shadow-md flex flex-col items-center relative">
+  <header dir="rtl" class="bg-blue-500 text-white p-4 shadow-md flex flex-col items-center relative">
     <img
       src="https://media.istockphoto.com/id/1459657048/fr/vectoriel/sandwich-pita-falafel-avec-le-drapeau-isra%C3%A9lien-boules-frites-%C3%A0-base-de-pois-chiches.jpg?s=612x612&w=0&k=20&c=YDja2ebboWPGZvtkIsRlWVK_GhEn_ezMhdn3LDSFg_o="
       alt="לוגו בלה תל אביב"
